@@ -12,26 +12,15 @@ I am using [LunarVim](https://www.lunarvim.org), which already has LuaSnip insta
 
 ```lua
 lvim.plugins = {
-  { "xinleibird/vim-vsc-snippets" },
+  {
+    "xinleibird/vim-vsc-snippets",
+    config = function()
+      local path = require("lvim.utils").join_paths(get_runtime_dir(), "site", "pack", "lazy", "opt", "vim-vsc-snippets")
+      require("luasnip.loaders.from_vscode").lazy_load({ paths = path })
+    end,
+  },
   ...
 }
-```
-
-Or just install with Lazy.
-
-```lua
-require("lazy").setup({
-  "xinleibird/vim-vsc-snippets",
-  ...
-})
-```
-
-## Configuration
-
-Don't forget load this plugin with LuaSnip: add below line in LunarVim's init file `~/.config/lvim/config.lua`.
-
-```lua
-require("luasnip.loaders.from_vscode").lazy_load({ package = "xinleibird/vim-vsc-snippets" })
 ```
 
 If you use LunarVim, you can turn off LunarVim's built-in [friendly_snippets](https://github.com/rafamadriz/friendly-snippets) if you wish.
