@@ -44,17 +44,17 @@
   },
   "Log to the console": {
     "prefix": "log",
-    "body": ["console.log($1);", "$0"],
+    "body": ["console.log($TM_SELECTED_TEXT$1);", "$0"],
     "description": "Log to the console"
   },
   "Log warning to console": {
     "prefix": "warn",
-    "body": ["console.warn($1);", "$0"],
+    "body": ["console.warn($TM_SELECTED_TEXT$1);", "$0"],
     "description": "Log warning to the console"
   },
   "Log error to console": {
     "prefix": "error",
-    "body": ["console.error($1);", "$0"],
+    "body": ["console.error($TM_SELECTED_TEXT$1);", "$0"],
     "description": "Log error to the console"
   },
   "Define a full property": {
