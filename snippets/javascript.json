@@ -26,10 +26,12 @@
     "prefix": "prop",
     "body": [
       "",
-      "#${1:value}",
+      "#${1:value};",
+      "",
       "get ${1:value}() {",
       "\treturn this.#${1:value};",
       "}",
+      "",
       "set ${1:value}(v) {",
       "\tthis.#${1:value} = v;",
       "}",
