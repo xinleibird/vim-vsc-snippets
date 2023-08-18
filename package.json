@@ -6,6 +6,17 @@
   "contributes": {
     "snippets": [
       {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "vue",
+          "svelte"
+        ],
+        "path": "./snippets/ecmascript.json"
+      },
+      {
         "language": "groovy",
         "path": "./snippets/groovy.json"
       },
